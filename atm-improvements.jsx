@@ -18,7 +18,7 @@ const Account = () => {
   const [validTransaction, setValidTransaction] = React.useState(false);
 
 
-  let status = `Account Balance $ ${totalState} `;
+  let status = `Account Balance: $${totalState} `;
   console.log(`Account Rendered with isDeposit: ${isDeposit}`);
   const handleChange = (event) => {
     console.log(`handleChange ${event.target.value}`);
@@ -27,6 +27,7 @@ const Account = () => {
     }
     if (mode === 'Withdraw' && Number(event.target.value) > totalState) {
       setValidTransaction(false);
+     // alert (`Insufficient funds available. Please deposit $${ Number(event.target.value - totalState)} to continue.`);
     } else {
       setValidTransaction(true);
     }
@@ -54,7 +55,7 @@ const Account = () => {
     <form onSubmit={handleSubmit}>
       <>
       <h2 id="total">{status}</h2>
-      <label>Select an action below to continue</label>
+      <label>Select an action below to continue <p></p></label>
       <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
       <option id="no-selection" value=""></option>
       <option id="deposit-selection" value="Deposit">Deposit</option>
