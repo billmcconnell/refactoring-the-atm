@@ -14,7 +14,7 @@
     padding: 0.375rem 0.75rem;
     border-radius: 0.25rem;
     color:#010101;
-    /* background-color: rgb(9, 1, 42);*/
+    background-color: white;
     margin-bottom: 20px;
     display: block;
   }
@@ -28,13 +28,13 @@
     padding: 0.375rem 0.75rem;
     border-radius: 0.25rem;
     color:#010101;
-    /*background-color: rgb(9, 1, 42);*/
+    background-color: rgb(9, 1, 42);
     margin-bottom: 20px;
   }
   
   input:disabled{
     opacity: 0.5;
-    color:#ffffff;
+    color: white;
   }
 
 body {
